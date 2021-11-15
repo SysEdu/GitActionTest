@@ -13,7 +13,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: windows-2019
+    runs-on: windows-lastest
     strategy:
       matrix:
         include:
@@ -69,7 +69,7 @@ jobs:
       targetName: HelloActions-Qt.exe
     steps:
       - name: Install Qt
-        uses: jurplel/install-qt-action@v2.13.0
+        uses: jurplel/install-qt-action@v2.14.0
         with:
           version: ${{ matrix.qt_ver }}
           arch: ${{ matrix.qt_arch }}
